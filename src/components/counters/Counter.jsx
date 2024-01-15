@@ -23,7 +23,7 @@ export default function Counter() {
   function down() {
     // pasitikrinti
     // jei counterValue === 0 tai nemazinam
-    if (counterValue - 1 < 0) return;
+    // if (counterValue - 1 < 0) return;
     setCounterValue(counterValue - 1);
   }
 
@@ -44,7 +44,9 @@ export default function Counter() {
       </p>
       <div className='control'>
         <button onClick={up}>Up</button>
-        <button onClick={down}>Down</button>
+        <button disabled={counterValue === 0} onClick={down}>
+          Down
+        </button>
         <button onClick={() => upBy(15)}>up by 10</button>
       </div>
     </div>
