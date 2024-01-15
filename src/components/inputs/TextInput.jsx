@@ -2,8 +2,13 @@ import { useState } from 'react';
 
 export default function TextInput() {
   const [title, setTitle] = useState('Pradine reiksme');
+  const [textValue, setTextValue] = useState('');
   const [isTitleUpdated, setIsTitleUpdated] = useState(false);
-  console.log('title ===', title);
+
+  function textUpdateHandler(event) {
+    setTextValue(event.target.value);
+  }
+
   function updateTitle(event) {
     // console.log('event ===', event);
     const inputEl = event.target;
@@ -27,23 +32,27 @@ export default function TextInput() {
     <div>
       <h2>{isTitleUpdated ? title : 'Main title'}</h2>
       {/* <h2>{title}</h2> */}
-      <fieldset>
-        <legend>Update</legend>
-        <input
-          value={title}
-          onChange={updateTitle}
-          type='text'
-          placeholder='enter here'
-        />
-        {/* sukurti ir susieti su state */}
-        <textarea cols='30' rows='10'></textarea>
-        <button onClick={makeTitle}>Toggle title</button>
-      </fieldset>
+      {isTitleUpdated === false && (
+        <fieldset>
+          <legend>Update</legend>
+          <input
+            value={title}
+            onChange={updateTitle}
+            type='text'
+            placeholder='enter here'
+          />
+          {/* sukurti ir susieti su state */}
+          <textarea onChange={textUpdateHandler} cols='30' rows='10'></textarea>
+          <button onClick={makeTitle}>Toggle title</button>
+        </fieldset>
+      )}
 
-      <div>
-        <h2>Title</h2>
-        <p>text</p>
-      </div>
+      {isTitleUpdated === true && (
+        <div className='card'>
+          <h2>{title}</h2>
+          <p>{textValue}</p>
+        </div>
+      )}
     </div>
   );
 }
