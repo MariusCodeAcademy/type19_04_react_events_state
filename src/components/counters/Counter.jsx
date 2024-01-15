@@ -18,14 +18,34 @@ export default function Counter() {
     console.log('counterValue inside ===', counterValue);
   }
 
+  const greenStyle = { color: 'green', fontWeight: 'bold' };
+
+  function down() {
+    // pasitikrinti
+    // jei counterValue === 0 tai nemazinam
+    if (counterValue - 1 < 0) return;
+    setCounterValue(counterValue - 1);
+  }
+
+  function upBy(howMuch) {
+    setCounterValue(counterValue + howMuch);
+  }
+
+  const valueLargerThan5 = counterValue > 5;
+  console.log('valueLargerThan5 ===', valueLargerThan5);
+
+  const counterColorStyles = valueLargerThan5 ? greenStyle : {};
+
   return (
     <div className='counter'>
       {/* <p className='value'>{value}</p> */}
-      <p className='value'>{counterValue}</p>
+      <p style={counterColorStyles} className='value'>
+        {counterValue}
+      </p>
       <div className='control'>
         <button onClick={up}>Up</button>
-        <button>Down</button>
-        <button>up by 10</button>
+        <button onClick={down}>Down</button>
+        <button onClick={() => upBy(15)}>up by 10</button>
       </div>
     </div>
   );
