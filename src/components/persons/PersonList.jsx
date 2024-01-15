@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { personData } from './data';
 
+function getMales(arr) {}
+
 export default function PersonList() {
   // console.log('personData ===', personData);
   const [mainArr, setMainArr] = useState(personData);
@@ -10,7 +12,9 @@ export default function PersonList() {
   const howMany = mainArr.length;
 
   const malesCount = mainArr.filter((pObj) => pObj.gender === 'male').length;
-  console.log('malesCount ===', malesCount);
+
+  const malesList = getMales(mainArr);
+
   return (
     <div>
       <h2>Persons ({howMany})</h2>
