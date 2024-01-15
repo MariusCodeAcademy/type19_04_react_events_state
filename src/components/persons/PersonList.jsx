@@ -19,7 +19,8 @@ export default function PersonList() {
         <p>Total persons: {howMany}</p>
         <p>Total males: {malesCount}</p>
         <p>Total females: </p>
-        <p>Persons above 37 years: </p>
+        <p>Persons above 37 years: (count) </p>
+        <p>Persons above 37 years: (list) </p>
         <p>Person with longesnt name: </p>
         <p>Average persons age: </p>
         <p>Total persons age: </p>

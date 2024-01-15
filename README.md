@@ -3,12 +3,13 @@
 1.
 
 ```js
-  <p>Total females: </p>
-  <p>Persons above 37 years: </p>
-  <p>Person with longesnt name: </p>
-  <p>Average persons age: </p>
-  <p>Total persons age: </p>
-  <p>(all hobies atskirti kableliais ir tarpeliais)</p>
+<p>Total females: </p>
+<p>Persons above 37 years: (count) </p>
+<p>Persons above 37 years: (list) </p>
+<p>Person with longesnt name: </p>
+<p>Average persons age: </p>
+<p>Total persons age: </p>
+<p>(all hobies atskirti kableliais ir tarpeliais)</p>
 ```
 
 2.
