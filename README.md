@@ -26,5 +26,6 @@ url: https://preview.colorlib.com/#nitro
 2. generuoti elementus is objektu masyvo.
 3. padaryti kad paspaudus ant korteles jos fonas taptu tamsus o tekstas sviesus.
 
-4. Calculator
-   padaryti skaiciuotuva kuris skaicuoja 2 ivesties lauku operacijas (+, -, \*, / )
+## Calculator
+
+padaryti skaiciuotuva kuris skaicuoja 2 ivesties lauku operacijas (+, -, \*, / )
