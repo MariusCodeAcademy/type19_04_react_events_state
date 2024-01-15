@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
-export default function Counter() {
+export default function Counter({ init = 0, title: initTitle = 'add title' }) {
   console.log('<Counter /> sukurtas');
   // let value = 0;
-  const [counterValue, setCounterValue] = useState(0);
-  const [title, setTitle] = useState('Push ups');
+  const [counterValue, setCounterValue] = useState(init);
+  const [title, setTitle] = useState(initTitle);
 
   // counterValue += 1; // niekada nekeiciam counterValue tiesiogiai su prilyginimu
   // console.log('counterValue ===', counterValue);

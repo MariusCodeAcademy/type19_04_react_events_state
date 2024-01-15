@@ -1,4 +1,5 @@
-import Counter from './components/counters/Counter';
+import CounterList from './components/counters/CountersList';
+import TextInput from './components/inputs/TextInput';
 import './styles/App.css';
 
 export default function App() {
@@ -8,7 +9,8 @@ export default function App() {
       <h1>Hello, world!</h1>
       <hr />
 
-      <CounterList />
+      {false && <CounterList />}
+      <TextInput />
     </div>
   );
 }
