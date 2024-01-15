@@ -1,5 +1,7 @@
 # Uzd
 
+## Cao NR 5
+
 1.
 
 ```js
@@ -23,3 +25,6 @@ url: https://preview.colorlib.com/#nitro
 1. pasidaryti visa sekcija su komponentais (css mazdaug, labai neuzsizaiskit)
 2. generuoti elementus is objektu masyvo.
 3. padaryti kad paspaudus ant korteles jos fonas taptu tamsus o tekstas sviesus.
+
+4. Calculator
+   padaryti skaiciuotuva kuris skaicuoja 2 ivesties lauku operacijas (+, -, \*, / )
