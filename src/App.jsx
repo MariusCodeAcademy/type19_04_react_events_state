@@ -1,5 +1,6 @@
 import CounterList from './components/counters/CountersList';
 import TextInput from './components/inputs/TextInput';
+import PersonList from './components/persons/PersonList';
 import './styles/App.css';
 
 export default function App() {
@@ -8,9 +9,9 @@ export default function App() {
     <div className='App container'>
       <h1>Hello, world!</h1>
       <hr />
-
+      <PersonList />
       {false && <CounterList />}
-      <TextInput />
+      {false && <TextInput />}
     </div>
   );
 }
