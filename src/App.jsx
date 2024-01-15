@@ -7,9 +7,8 @@ export default function App() {
     <div className='App container'>
       <h1>Hello, world!</h1>
       <hr />
-      <Counter />
-      <Counter />
-      <Counter />
+
+      <CounterList />
     </div>
   );
 }

@@ -4,6 +4,8 @@ export default function Counter() {
   console.log('<Counter /> sukurtas');
   // let value = 0;
   const [counterValue, setCounterValue] = useState(0);
+  const [title, setTitle] = useState('Push ups');
+
   // counterValue += 1; // niekada nekeiciam counterValue tiesiogiai su prilyginimu
   // console.log('counterValue ===', counterValue);
   // console.log('value ===', value);
@@ -23,7 +25,7 @@ export default function Counter() {
   function down() {
     // pasitikrinti
     // jei counterValue === 0 tai nemazinam
-    // if (counterValue - 1 < 0) return;
+    if (counterValue - 1 < 0) return;
     setCounterValue(counterValue - 1);
   }
 
@@ -31,6 +33,7 @@ export default function Counter() {
     setCounterValue(counterValue + howMuch);
   }
 
+  // computed value - reiksme tiesiogiai priklausanti nuo state
   const valueLargerThan5 = counterValue > 5;
   console.log('valueLargerThan5 ===', valueLargerThan5);
 
@@ -39,14 +42,17 @@ export default function Counter() {
   return (
     <div className='counter'>
       {/* <p className='value'>{value}</p> */}
+      <h2>{title}</h2>
       <p style={counterColorStyles} className='value'>
         {counterValue}
       </p>
       <div className='control'>
         <button onClick={up}>Up</button>
-        <button disabled={counterValue === 0} onClick={down}>
-          Down
-        </button>
+        {counterValue > 0 && (
+          <button disabled={counterValue === 0} onClick={down}>
+            Down
+          </button>
+        )}
         <button onClick={() => upBy(15)}>up by 10</button>
       </div>
     </div>
