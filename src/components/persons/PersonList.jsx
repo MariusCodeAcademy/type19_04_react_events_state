@@ -13,7 +13,11 @@ export default function PersonList() {
 
   const malesCount = mainArr.filter((pObj) => pObj.gender === 'male').length;
 
-  const malesList = getMales(mainArr);
+  // const malesList = getMales(mainArr);
+
+  const allHobbiesString = mainArr.reduce((total, pObj) => total + pObj.hobby + ', ', '');
+  const allHobbiesString2 = mainArr.map((pObj) => pObj.hobby).join(', ') + '.';
+  console.log('allHobbiesString2 ===', allHobbiesString2);
 
   return (
     <div>
@@ -29,6 +33,8 @@ export default function PersonList() {
         <p>Average persons age: </p>
         <p>Total persons age: </p>
         <p>(all hobies atskirti kableliais ir tarpeliais)</p>
+        <p>{allHobbiesString}</p>
+        <p>{allHobbiesString2}</p>
       </fieldset>
       <ul className='grid'>
         {mainArr.map((pObj) => (
